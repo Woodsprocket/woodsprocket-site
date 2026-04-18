@@ -1,0 +1,97 @@
+:root {
+    --bg-dark: #121212;
+    --steel: #b0b0b0;
+    --wood-accent: #d4a373; /* Matches the warm wood in your logo */
+    --text-main: #e0e0e0;
+    --charcoal: #1e1e1e;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    line-height: 1.8;
+}
+
+/* Header & Logo */
+header {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.main-logo {
+    max-width: 280px;
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 3px;
+    color: var(--steel);
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--wood-accent);
+    margin: 20px auto;
+}
+
+.tagline {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: var(--wood-accent);
+}
+
+/* Layout */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 100px 20px;
+    text-align: center;
+}
+
+.card {
+    background-color: var(--charcoal);
+    border: 1px solid #333;
+    padding: 40px;
+    border-radius: 4px;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.email-link {
+    color: var(--wood-accent);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.email-link:hover {
+    color: var(--steel);
+}
+
+/* Footer */
+footer {
+    padding: 40px 20px;
+    background-color: #0a0a0a;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    border-top: 1px solid #222;
+}
+
+.legal-fine-print {
+    margin-top: 10px;
+    font-style: italic;
+    opacity: 0.7;
+}
