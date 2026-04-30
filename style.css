@@ -18,7 +18,38 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Links Styling */
+/* Consistently Styled Brand Name Link */
+.brand-name {
+    display: inline-block; 
+    white-space: nowrap;   /* Prevents the second line wrap */
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-secondary) !important; 
+    text-transform: uppercase;
+    text-decoration: none !important; 
+    transition: opacity 0.2s ease;
+}
+
+.brand-name:hover {
+    opacity: 0.7;
+    text-decoration: none !important;
+}
+
+/* Nav Section - Fixed Alignment */
+nav {
+    padding: 30px 0; /* Padding top/bottom only */
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px; /* Aligns perfectly with the 1000px 'main' container below */
+    text-align: left; /* Ensures the link stays on the left */
+}
+
+/* Global Links Styling */
 a {
     color: var(--link-color);
     text-decoration: none;
@@ -30,38 +61,7 @@ a:hover {
     opacity: 0.8;
 }
 
-/* Consistently Styled Brand Name Link */
-.brand-name {
-    display: inline-block; 
-    white-space: nowrap;   /* CRITICAL: This prevents the second line wrap */
-    letter-spacing: 0.2rem;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--text-secondary) !important; /* Forces the color to stay gray */
-    text-transform: uppercase;
-    text-decoration: none !important; /* Removes blue underline */
-    transition: opacity 0.2s ease;
-}
-
-.brand-name:hover {
-    opacity: 0.7;
-    text-decoration: none !important;
-}
-
-/* Nav */
-nav {
-    padding: 30px 20px; /* Reduced side padding to prevent squeezing the text */
-    border-bottom: 1px solid var(--border);
-}
-
-.nav-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-}
-
-/* Hero Section */
+/* Main Content Container */
 main {
     max-width: 1000px;
     margin: 0 auto;
@@ -164,5 +164,5 @@ footer a:hover {
     .hero { flex-direction: column; text-align: center; padding: 60px 0; }
     .hero-content p { margin: 0 auto; }
     .details-grid { grid-template-columns: 1fr; }
-    .brand-name { font-size: 0.75rem; } /* Slightly smaller on mobile to ensure one line */
+    .brand-name { font-size: 0.75rem; } 
 }
