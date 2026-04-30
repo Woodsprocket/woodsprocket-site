@@ -28,8 +28,9 @@ nav {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
-    display: block; /* Forced block for standard left-alignment */
-    text-align: left;
+    display: flex !important; /* Force flex to use alignment tools */
+    justify-content: flex-start !important; /* Forces content to the LEFT */
+    align-items: center;
 }
 
 .brand-name {
@@ -41,6 +42,7 @@ nav {
     color: var(--text-secondary) !important;
     text-transform: uppercase;
     text-decoration: none !important;
+    width: auto !important;
     line-height: 1 !important; /* Prevents vertical stretching */
 }
 
