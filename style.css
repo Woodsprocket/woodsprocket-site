@@ -8,34 +8,6 @@
     --link-color: #2997ff; /* Modern high-contrast blue for dark backgrounds */
 }
 
-.brand-link {
-    text-decoration: none; /* Removes the default blue underline */
-    display: inline-block;
-    transition: opacity 0.2s ease;
-}
-
-.brand-link:hover {
-    opacity: 0.7; /* Gives a subtle "press" effect when hovered */
-    text-decoration: none; /* Keeps it clean on hover */
-}
-
-.brand-name {
-    display: inline-block; /* Keeps it on one line */
-    letter-spacing: 0.2rem;
-    font-weight: 600;
-    font-size: 0.9rem; /* This matches your original size */
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    text-decoration: none; /* Removes the underline */
-    transition: opacity 0.2s ease;
-}
-
-.brand-name:hover {
-    opacity: 0.7;
-    text-decoration: none;
-    color: var(--text-secondary); /* Keeps it from turning blue on hover */
-}
-
 * { box-sizing: border-box; }
 
 body {
@@ -58,17 +30,35 @@ a:hover {
     opacity: 0.8;
 }
 
-/* Nav */
-nav {
-    padding: 30px 50px;
-    border-bottom: 1px solid var(--border);
-}
-
+/* Consistently Styled Brand Name Link */
 .brand-name {
+    display: inline-block; 
+    white-space: nowrap;   /* CRITICAL: This prevents the second line wrap */
     letter-spacing: 0.2rem;
     font-weight: 600;
     font-size: 0.9rem;
-    color: var(--text-secondary);
+    color: var(--text-secondary) !important; /* Forces the color to stay gray */
+    text-transform: uppercase;
+    text-decoration: none !important; /* Removes blue underline */
+    transition: opacity 0.2s ease;
+}
+
+.brand-name:hover {
+    opacity: 0.7;
+    text-decoration: none !important;
+}
+
+/* Nav */
+nav {
+    padding: 30px 20px; /* Reduced side padding to prevent squeezing the text */
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
 }
 
 /* Hero Section */
@@ -174,4 +164,5 @@ footer a:hover {
     .hero { flex-direction: column; text-align: center; padding: 60px 0; }
     .hero-content p { margin: 0 auto; }
     .details-grid { grid-template-columns: 1fr; }
+    .brand-name { font-size: 0.75rem; } /* Slightly smaller on mobile to ensure one line */
 }
