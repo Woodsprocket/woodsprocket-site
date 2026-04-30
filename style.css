@@ -28,8 +28,8 @@ nav {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
-    display: flex !important; /* Force flex to use alignment tools */
-    justify-content: flex-start !important; /* Forces content to the LEFT */
+    display: flex !important;
+    justify-content: center !important; /* ← center it */
     align-items: center;
 }
 
