@@ -5,58 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Woodsprocket Studios</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<nav id="global-nav">
-    </nav>
+<nav id="global-nav"></nav>
 
 <script>
     fetch('/nav.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('global-nav').innerHTML = data;
+        })
+        .catch(() => {
+            document.getElementById('global-nav').innerHTML =
+                '<div class="nav-container"><a href="/" class="brand-name">WOODSPROCKET STUDIOS</a></div>';
         });
 </script>
 
-    <main>
+    <main class="prose">
+
         <h1>Privacy Policy</h1>
         <p class="subtitle">Last Updated: April 30, 2026</p>
 
         <section>
-            <p>Woodsprocket Studios LLC ("we," "us," or "our") operates woodsprocket.com and develops mobile applications. We are committed to protecting your privacy through <strong>data minimization</strong>—meaning we only collect the absolute minimum data necessary to provide our Services.</p>
+            <p>Woodsprocket Studios LLC ("we," "us," or "our") operates woodsprocket.com and develops mobile applications. We are committed to protecting your privacy through <strong>data minimization</strong> — meaning we only collect the absolute minimum data necessary to provide our Services.</p>
         </section>
 
         <section>
             <h3>1. Data We Do Not Collect</h3>
-            <p>Woodsprocket Studios is built on a privacy-first philosophy. We do not collect names, mailing addresses, or phone numbers. We do not use third-party trackers or "fingerprinting" to identify you or your device across other apps or websites. Our current games do not require user accounts.</p>
+            <p>Woodsprocket Studios is built on a privacy-first philosophy. We do not collect names, mailing addresses, or phone numbers. We do not use third-party trackers or "fingerprinting" to identify you or your device across other apps or websites. We do not use third-party analytics or crash reporting tools. Our Services do not require user accounts.</p>
         </section>
 
         <section>
             <h3>2. Information From Third Parties</h3>
-            <p><strong>Apple App Store:</strong> If you purchase a game or in-app item, Apple processes that transaction. We receive anonymized sales reports and performance data, but we never see your credit card or billing details.</p>
-            <p><strong>Infrastructure:</strong> Our domain and hosting providers may collect standard log files (IP addresses, browser type) for security and performance monitoring.</p>
+            <p><strong>Apple App Store:</strong> If you purchase an app or in-app item, Apple processes that transaction. We receive anonymized sales reports and performance data through Apple's native analytics, but we never see your credit card or billing details.</p>
+            <p><strong>Infrastructure:</strong> Our domain and hosting providers may collect standard server log files (IP addresses, browser type) for security and performance monitoring. This data is retained only as long as necessary for those purposes and is not used to identify individual users.</p>
         </section>
 
         <section>
-            <h3>3. Children’s Privacy</h3>
-            <p>Our Services are intended for a general audience. In compliance with COPPA and global safety standards, we do not knowingly collect personal data from children. Our apps use Apple’s native age-rating systems to ensure content appropriateness.</p>
+            <h3>3. Push Notifications</h3>
+            <p>Our Services do not currently send push notifications. If this changes in a future update, this policy will be updated accordingly and you will be able to opt out at any time through your device settings.</p>
         </section>
 
         <section>
-            <h3>4. Your Rights</h3>
-            <p>Regardless of your location, you have the right to know what data is being collected. Because we do not collect personal identifiers, your "Right to be Forgotten" is the default state of our studio.</p>
+            <h3>4. Children's Privacy</h3>
+            <p>Our Services are intended for a general audience. In compliance with the Children's Online Privacy Protection Act (COPPA) and applicable global standards, we do not knowingly collect personal data from children under 13. Our apps use Apple's native age-rating systems to ensure content appropriateness. If you believe a child has provided us with personal information, please contact us and we will promptly delete it.</p>
         </section>
 
         <section>
-            <h3>5. Contact Us</h3>
-            <p>If you have any questions about this policy, please contact us via our official studio channel:</p>
+            <h3>5. Your Rights</h3>
+            <p>Regardless of your location — including users in the European Union (GDPR), California (CCPA), and other jurisdictions with data protection laws — you have the right to know what personal data is being collected about you and to request its deletion. Because we do not collect personal identifiers, this is the default state for all users of our Services. We retain no personal data.</p>
+        </section>
+
+        <section>
+            <h3>6. Changes to This Policy</h3>
+            <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last Updated" date at the top of this page. We encourage you to review this policy periodically. Continued use of our Services after any changes constitutes your acceptance of the updated policy.</p>
+        </section>
+
+        <section>
+            <h3>7. Contact Us</h3>
+            <p>If you have any questions about this policy, please contact us:</p>
             <p><strong>Email:</strong> <a href="mailto:info@woodsprocket.com">info@woodsprocket.com</a></p>
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 Woodsprocket Studios LLC | <a href="/">Home</a></p>
+        <div class="footer-container">
+            <p>&copy; 2026 Woodsprocket Studios LLC. All rights reserved. | <a href="/">Home</a> | <a href="/privacy">Privacy Policy</a></p>
+            <p class="legal">Woodsprocket Studios and Project Alder are trademarks of Woodsprocket Studios LLC.</p>
+        </div>
     </footer>
 
 </body>
