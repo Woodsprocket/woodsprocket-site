@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Woodsprocket Studios LLC</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/png" href="/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<nav id="global-nav">
-    </nav>
+<nav id="global-nav"></nav>
 
 <script>
     fetch('/nav.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('global-nav').innerHTML = data;
+        })
+        .catch(() => {
+            document.getElementById('global-nav').innerHTML =
+                '<div class="nav-container"><a href="/" class="brand-name">WOODSPROCKET STUDIOS</a></div>';
         });
 </script>
 
     <main>
         <section class="hero">
-            <img src="logo.png" alt="Woodsprocket Studios" class="main-logo">
+            <img src="/logo.png" alt="Woodsprocket Studios" class="main-logo">
             <div class="hero-content">
                 <h1>Independent software development for iOS.</h1>
                 <p>Woodsprocket Studios LLC is a specialized development studio based in Rome, Georgia.</p>
@@ -38,7 +41,7 @@
                 <h2>Project Alder</h2>
                 <p>Currently in development. Built for iOS.</p>
             </div>
-            
+
             <div class="detail-item">
                 <h3>Contact</h3>
                 <h2>Inquiries</h2>
