@@ -8,7 +8,16 @@
 </head>
 <body>
 
-    <nav id="global-nav"></nav>
+<nav id="global-nav">
+    </nav>
+
+<script>
+    fetch('/nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('global-nav').innerHTML = data;
+        });
+</script>
 
     <main>
         <h1>Privacy Policy</h1>
@@ -26,7 +35,7 @@
         <section>
             <h3>2. Information From Third Parties</h3>
             <p><strong>Apple App Store:</strong> If you purchase a game or in-app item, Apple processes that transaction. We receive anonymized sales reports and performance data, but we never see your credit card or billing details.</p>
-            <p><strong>Infrastructure:</strong> Our domain and hosting providers (Namecheap/GitHub) may collect standard log files (IP addresses, browser type) for security and performance monitoring.</p>
+            <p><strong>Infrastructure:</strong> Our domain and hosting providers may collect standard log files (IP addresses, browser type) for security and performance monitoring.</p>
         </section>
 
         <section>
@@ -46,19 +55,9 @@
         </section>
     </main>
 
-    <footer id="global-footer"></footer>
-
-    <script>
-        // Inject Nav
-        fetch('/nav.html')
-            .then(res => res.text())
-            .then(data => document.getElementById('global-nav').innerHTML = data);
-        
-        // Inject Footer
-        fetch('/footer.html')
-            .then(res => res.text())
-            .then(data => document.getElementById('global-footer').innerHTML = data);
-    </script>
+    <footer>
+        <p>&copy; 2026 Woodsprocket Studios LLC | <a href="/">Home</a></p>
+    </footer>
 
 </body>
 </html>
