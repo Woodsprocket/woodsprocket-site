@@ -20,12 +20,20 @@
 }
 
 .brand-name {
-    /* Keeping your existing styles */
+    display: inline-block; /* Keeps it on one line */
     letter-spacing: 0.2rem;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* This matches your original size */
     color: var(--text-secondary);
     text-transform: uppercase;
+    text-decoration: none; /* Removes the underline */
+    transition: opacity 0.2s ease;
+}
+
+.brand-name:hover {
+    opacity: 0.7;
+    text-decoration: none;
+    color: var(--text-secondary); /* Keeps it from turning blue on hover */
 }
 
 * { box-sizing: border-box; }
