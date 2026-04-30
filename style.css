@@ -4,7 +4,6 @@
     --text-secondary: #a1a1a1;
     --accent: #d4a373;
     --border: #222222;
-    --link-color: #2997ff;
 }
 
 * { box-sizing: border-box; }
@@ -26,7 +25,7 @@ a:hover {
     opacity: 0.7;
 }
 
-/* NAVIGATION - THE FIX */
+/* NAVIGATION */
 nav {
     padding: 30px 0;
     border-bottom: 1px solid var(--border);
@@ -36,22 +35,22 @@ nav {
 .nav-container {
     width: 100%;
     padding: 0 40px;
-    display: flex !important;
-    justify-content: flex-start !important;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .brand-name {
-    display: inline-block !important;
-    white-space: nowrap !important; /* Forces one line */
+    display: inline-block;
+    white-space: nowrap;
     letter-spacing: 0.2rem;
     font-weight: 600;
-    font-size: 0.9rem !important;
-    color: var(--text-secondary) !important;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
     text-transform: uppercase;
-    text-decoration: none !important;
-    width: auto !important;
-    line-height: 1 !important; /* Prevents vertical stretching */
+    text-decoration: none;
+    width: auto;
+    line-height: 1;
 }
 
 .brand-name:hover {
@@ -107,6 +106,39 @@ main {
 
 .detail-item p { color: var(--text-secondary); }
 
+/* PROSE (Privacy Policy and other text-heavy pages) */
+.prose h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 60px 0 10px 0;
+}
+
+.prose .subtitle {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0 0 40px 0;
+}
+
+.prose h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 40px 0 10px 0;
+    text-transform: none;
+}
+
+.prose p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0 0 16px 0;
+}
+
+.prose section {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+
 /* FOOTER */
 footer {
     border-top: 1px solid var(--border);
@@ -120,5 +152,6 @@ footer {
 @media (max-width: 768px) {
     .hero { flex-direction: column; text-align: center; }
     .details-grid { grid-template-columns: 1fr; }
-    .brand-name { font-size: 0.75rem !important; }
+    .brand-name { font-size: 0.75rem; }
+    .nav-container { padding: 0 20px; }
 }
