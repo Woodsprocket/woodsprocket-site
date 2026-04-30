@@ -1,11 +1,10 @@
 :root {
     --bg: #0a0a0a;
-    --card-bg: #111111;
     --text-primary: #ffffff;
     --text-secondary: #a1a1a1;
-    --accent: #d4a373; /* Muted gold/wood tone from logo */
+    --accent: #d4a373;
     --border: #222222;
-    --link-color: #2997ff; /* Modern high-contrast blue for dark backgrounds */
+    --link-color: #2997ff;
 }
 
 * { box-sizing: border-box; }
@@ -18,50 +17,38 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Consistently Styled Brand Name Link */
-.brand-name {
-    display: inline-block; 
-    white-space: nowrap;   /* Prevents the second line wrap */
-    letter-spacing: 0.2rem;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--text-secondary) !important; 
-    text-transform: uppercase;
-    text-decoration: none !important; 
-    transition: opacity 0.2s ease;
-}
-
-.brand-name:hover {
-    opacity: 0.7;
-    text-decoration: none !important;
-}
-
-/* Nav Section - Fixed Alignment */
+/* NAVIGATION - THE FIX */
 nav {
-    padding: 30px 0; /* Padding top/bottom only */
+    padding: 30px 0;
     border-bottom: 1px solid var(--border);
+    width: 100%;
 }
 
 .nav-container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 20px; /* Aligns perfectly with the 1000px 'main' container below */
-    text-align: left; /* Ensures the link stays on the left */
+    padding: 0 20px;
+    display: block; /* Forced block for standard left-alignment */
+    text-align: left;
 }
 
-/* Global Links Styling */
-a {
-    color: var(--link-color);
-    text-decoration: none;
-    transition: color 0.2s ease, opacity 0.2s ease;
+.brand-name {
+    display: inline-block !important;
+    white-space: nowrap !important; /* Forces one line */
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    font-size: 0.9rem !important;
+    color: var(--text-secondary) !important;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    line-height: 1 !important; /* Prevents vertical stretching */
 }
 
-a:hover {
-    text-decoration: underline;
-    opacity: 0.8;
+.brand-name:hover {
+    opacity: 0.7;
 }
 
-/* Main Content Container */
+/* MAIN CONTENT */
 main {
     max-width: 1000px;
     margin: 0 auto;
@@ -75,32 +62,23 @@ main {
     gap: 60px;
 }
 
-.main-logo {
-    width: 280px;
-    height: auto;
-}
+.main-logo { width: 280px; height: auto; }
 
 .hero-content h1 {
     font-size: 2.5rem;
     font-weight: 600;
-    line-height: 1.2;
     margin: 0 0 20px 0;
 }
 
 .hero-content p {
     color: var(--text-secondary);
     font-size: 1.1rem;
-    max-width: 500px;
     line-height: 1.6;
 }
 
-.divider {
-    height: 1px;
-    background: var(--border);
-    width: 100%;
-}
+.divider { height: 1px; background: var(--border); width: 100%; }
 
-/* Details Grid */
+/* DETAILS GRID */
 .details-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -111,58 +89,26 @@ main {
 .detail-item h3 {
     text-transform: uppercase;
     font-size: 0.75rem;
-    letter-spacing: 0.1rem;
     color: var(--accent);
     margin-bottom: 10px;
 }
 
-.detail-item h2 {
-    font-size: 1.5rem;
-    margin: 0 0 10px 0;
-}
+.detail-item h2 { font-size: 1.5rem; margin: 0 0 10px 0; }
 
-.detail-item p {
-    color: var(--text-secondary);
-    margin: 0;
-}
+.detail-item p { color: var(--text-secondary); }
 
-/* Special Contact Link style */
-.contact-link {
-    color: var(--text-primary);
-    text-decoration: none;
-    font-weight: 600;
-    border-bottom: 1px solid var(--accent);
-    padding-bottom: 2px;
-}
-
-/* Footer */
+/* FOOTER */
 footer {
     border-top: 1px solid var(--border);
     padding: 50px;
     text-align: center;
 }
 
-.footer-container p {
-    font-size: 0.8rem;
-    color: #444;
-    margin: 5px 0;
-}
+.footer-container p { font-size: 0.8rem; color: #444; }
 
-footer a {
-    color: var(--text-secondary);
-    text-decoration: underline;
-}
-
-footer a:hover {
-    color: var(--link-color);
-}
-
-.legal { text-transform: uppercase; letter-spacing: 1px; }
-
-/* Mobile Adaptations */
+/* MOBILE */
 @media (max-width: 768px) {
-    .hero { flex-direction: column; text-align: center; padding: 60px 0; }
-    .hero-content p { margin: 0 auto; }
+    .hero { flex-direction: column; text-align: center; }
     .details-grid { grid-template-columns: 1fr; }
-    .brand-name { font-size: 0.75rem; } 
+    .brand-name { font-size: 0.75rem !important; }
 }
