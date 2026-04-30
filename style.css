@@ -89,10 +89,16 @@ main {
 
 /* DETAILS GRID */
 .details-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
     padding: 80px 0;
+    flex-wrap: wrap;
+}
+
+.detail-item {
+    flex: 0 1 auto;          
+    min-width: 250px;
 }
 
 .detail-item h3 {
