@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Woodsprocket Studios</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .error-page {
+            max-width: 600px;
+            margin: 80px auto;
+            padding: 0 40px;
+        }
+
+        .code-comments {
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            color: #444;
+            line-height: 2;
+            margin-bottom: 40px;
+        }
+
+        .error-page h1 {
+            font-size: 5rem;
+            font-weight: 600;
+            margin: 0 0 12px 0;
+            line-height: 1;
+        }
+
+        .error-page h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+        }
+
+        .error-page p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0 0 36px 0;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 9px;
+            height: 1em;
+            background: var(--text-secondary);
+            margin-left: 2px;
+            vertical-align: text-bottom;
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .sticky-note {
+            display: inline-block;
+            background: #fdf3c0;
+            color: #4a3b00;
+            padding: 16px 20px;
+            font-size: 0.85rem;
+            line-height: 1.7;
+            transform: rotate(-1.5deg);
+            margin-bottom: 40px;
+            max-width: 240px;
+        }
+
+        .divider-thin {
+            height: 1px;
+            background: var(--border);
+            margin-bottom: 32px;
+        }
+
+        .back-link {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+
+<nav id="global-nav"></nav>
+
+<script>
+    fetch('/nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('global-nav').innerHTML = data;
+        })
+        .catch(() => {
+            document.getElementById('global-nav').innerHTML =
+                '<div class="nav-container"><a href="/" class="brand-name">WOODSPROCKET STUDIOS</a></div>';
+        });
+</script>
+
+    <main>
+        <div class="error-page">
+
+            <div class="code-comments">
+                &lt;!-- TODO: build this page --&gt;<br>
+                &lt;!-- TODO: also the page before this one --&gt;<br>
+                &lt;!-- TODO: maybe don't ship until this is done --&gt;
+            </div>
+
+            <h1>404</h1>
+            <h2>You're not supposed to be here yet.</h2>
+            <p>This page doesn't exist — or it does, and we just haven't gotten around to it. Either way, nothing to see here.<span class="cursor"></span></p>
+
+            <div class="sticky-note">
+                reminder to self:<br>
+                finish this before<br>
+                anyone finds it<br><br>
+                — ws
+            </div>
+
+            <div class="divider-thin"></div>
+
+            <a href="/" class="back-link">← back to somewhere that actually exists</a>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Woodsprocket Studios LLC. All rights reserved. | <a href="/">Home</a> | <a href="/privacy">Privacy Policy</a></p>
+            <p class="legal">Woodsprocket Studios and Project Alder are trademarks of Woodsprocket Studios LLC.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
