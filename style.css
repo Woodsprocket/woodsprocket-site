@@ -73,6 +73,14 @@ main {
 
 .main-logo { width: 280px; height: auto; }
 
+.app-icon {
+    width: 80px;           /* Standardize the size */
+    height: 80px;
+    border-radius: 18px;   /* Gives it an iOS-style rounded corner */
+    object-fit: cover;     /* Ensures the image doesn't stretch weirdly */
+    margin-bottom: 20px;   /* Adds space between the icon and the text below it */
+}
+
 .hero-content h1 {
     font-size: 2.5rem;
     font-weight: 600;
