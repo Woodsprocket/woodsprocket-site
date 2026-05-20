@@ -13,6 +13,7 @@
 <nav id="global-nav"></nav>
 
 <script>
+    // Fetch Navigation
     fetch('/nav.html')
         .then(response => response.text())
         .then(data => {
@@ -21,6 +22,17 @@
         .catch(() => {
             document.getElementById('global-nav').innerHTML =
                 '<div class="nav-container"><a href="/" class="brand-name">WOODSPROCKET STUDIOS</a></div>';
+        });
+
+    // Fetch Footer
+    fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('global-footer').innerHTML = data;
+        })
+        .catch(() => {
+            document.getElementById('global-footer').innerHTML =
+                '<div class="footer-container"><p>&copy; 2026 Woodsprocket Studios LLC. All rights reserved.</p></div>';
         });
 </script>
 
