@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Apps | Woodsprocket Studios</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <nav id="global-nav"></nav>
+
+    <main>
+        <section class="prose">
+            <h1>Our Apps</h1>
+            <p class="subtitle">A collection of independent iOS software by Woodsprocket Studios.</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="details-grid">
+            <div class="detail-item">
+                <h3>Active Project</h3>
+                <h2>Tumble Sort</h2>
+                <p>Coming soon. Built natively for iOS.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="global-footer"></footer>
+
+    <script>
+        fetch('/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-nav').innerHTML = data;
+            })
+            .catch(() => {
+                document.getElementById('global-nav').innerHTML =
+                    '<div class="nav-container"><a href="/" class="brand-name">WOODSPROCKET STUDIOS</a></div>';
+            });
+
+        fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-footer').innerHTML = data;
+            })
+            .catch(() => {
+                document.getElementById('global-footer').innerHTML =
+                    '<div class="footer-container"><p>&copy; 2026 Woodsprocket Studios LLC. All rights reserved.</p></div>';
+            });
+    </script>
+</body>
+</html>
