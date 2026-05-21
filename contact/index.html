@@ -1,4 +1,17 @@
-<section class="contact-section" style="max-width: 600px; margin: 0 auto; text-align: center;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Woodsprocket Studios</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div id="nav-placeholder"></div>
+
+    <main>
+        <section class="contact-section" style="max-width: 600px; margin: 60px auto; text-align: center; padding: 20px;">
             <h3 style="color: var(--accent);">GET IN TOUCH</h3>
             <h2>Contact Woodsprocket</h2>
             <p style="margin-bottom: 40px;">Have a question about one of our apps or want to discuss a project? Drop us a line below.</p>
@@ -28,3 +41,18 @@
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
         </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('/nav.html')
+            .then(res => res.text())
+            .then(text => document.getElementById('nav-placeholder').innerHTML = text);
+        
+        fetch('/footer.html')
+            .then(res => res.text())
+            .then(text => document.getElementById('footer-placeholder').innerHTML = text);
+    </script>
+</body>
+</html>
