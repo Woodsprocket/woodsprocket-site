@@ -20,7 +20,8 @@
         </section>
 
         <section class="contact-section" style="max-width: 600px; margin: 0 auto 100px auto; padding: 0 20px;">
-            <form action="https://formspree.io/f/mykvwpld" method="POST" class="ws-form">
+            
+            <form action="https://formspree.io/f/mykvwpld" method="POST" class="ws-form" id="ws-contact-form">
                 <div class="form-group">
                     <input type="text" name="name" id="name" placeholder="Name" required>
                 </div>
@@ -44,12 +45,16 @@
 
                 <button type="submit" class="submit-btn" style="width: 100%;">Send Message</button>
             </form>
+            
+            <p id="form-status" style="display: none; font-weight: 600; font-size: 1.2rem; margin-top: 20px; color: var(--accent);"></p>
+            
         </section>
     </main>
     
     <footer id="global-footer"></footer>
 
     <script>
+        // 1. Template Loading (Navigation & Footer)
         fetch('/nav.html')
             .then(response => response.text())
             .then(data => {
@@ -69,6 +74,35 @@
                 document.getElementById('global-footer').innerHTML =
                     '<div class="footer-container"><p>&copy; 2026 Woodsprocket Studios LLC. All rights reserved.</p></div>';
             });
+
+        // 2. Form Submission Hijack (Prevents Formspree Redirect)
+        var form = document.getElementById("ws-contact-form");
+        var statusText = document.getElementById("form-status");
+
+        async function handleSubmit(event) {
+            event.preventDefault(); // Stops the browser from navigating away
+            var data = new FormData(event.target);
+            
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Hide the form and show the success message
+                    form.style.display = "none";
+                    statusText.innerHTML = "Thanks! Your message has been sent to Woodsprocket Studios.";
+                    statusText.style.display = "block";
+                    form.reset();
+                } else {
+                    statusText.innerHTML = "Oops! There was a problem submitting your form.";
+                    statusText.style.display = "block";
+                }
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
     </script>
 </body>
 </html>
