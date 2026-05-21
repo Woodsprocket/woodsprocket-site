@@ -46,7 +46,7 @@
                 <button type="submit" class="submit-btn" style="width: 100%;">Send Message</button>
             </form>
             
-            <p id="form-status" style="display: none; font-weight: 600; font-size: 1.2rem; margin-top: 20px; color: var(--accent);"></p>
+            <p id="form-status" style="display: none; text-align: center; font-weight: 600; font-size: 1.2rem; margin-top: 20px; color: var(--accent);"></p>
             
         </section>
     </main>
@@ -93,7 +93,7 @@
                 if (response.ok) {
                     // Hide the form and show the success message
                     form.style.display = "none";
-                    statusText.innerHTML = "Thanks! Your message has been sent to Woodsprocket Studios.";
+                    statusText.innerHTML = "Thanks! Your message has been sent to Woodsprocket&nbsp;Studios.";
                     statusText.style.display = "block";
                     form.reset();
                 } else {
