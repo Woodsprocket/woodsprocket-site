@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Woodsprocket Studios</title>
+    <title>Contact | Woodsprocket Studios</title>
+    
     <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div id="nav-placeholder"></div>
+    <nav id="global-nav"></nav>
 
     <main>
-        <section class="contact-section" style="max-width: 600px; margin: 60px auto; text-align: center; padding: 20px;">
-            <h3 style="color: var(--accent);">GET IN TOUCH</h3>
-            <h2>Contact Woodsprocket</h2>
-            <p style="margin-bottom: 40px;">Have a question about one of our apps or want to discuss a project? Drop us a line below.</p>
+        <section class="prose" style="text-align: center;">
+            <h1>Contact Woodsprocket</h1>
+            <p class="subtitle">Have a question about one of our apps or want to discuss a project? Drop us a line below.</p>
+        </section>
 
+        <section class="contact-section" style="max-width: 600px; margin: 0 auto 100px auto; padding: 0 20px;">
             <form action="https://formspree.io/f/mykvwpld" method="POST" class="ws-form">
                 <div class="form-group">
                     <input type="text" name="name" id="name" placeholder="Name" required>
@@ -38,11 +42,33 @@
                     <textarea name="message" id="message" rows="6" placeholder="How can we help?" required></textarea>
                 </div>
 
-                <button type="submit" class="submit-btn">Send Message</button>
+                <button type="submit" class="submit-btn" style="width: 100%;">Send Message</button>
             </form>
         </section>
     </main>
     
     <footer id="global-footer"></footer>
+
+    <script>
+        fetch('/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-nav').innerHTML = data;
+            })
+            .catch(() => {
+                document.getElementById('global-nav').innerHTML =
+                    '<div class="nav-container"><a href="/" class="brand-name">WOODSPROCKET STUDIOS</a></div>';
+            });
+
+        fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-footer').innerHTML = data;
+            })
+            .catch(() => {
+                document.getElementById('global-footer').innerHTML =
+                    '<div class="footer-container"><p>&copy; 2026 Woodsprocket Studios LLC. All rights reserved.</p></div>';
+            });
+    </script>
 </body>
 </html>
