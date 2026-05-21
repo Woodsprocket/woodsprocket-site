@@ -42,17 +42,7 @@
             </form>
         </section>
     </main>
-
-    <div id="footer-placeholder"></div>
-
-    <script>
-        fetch('/nav.html')
-            .then(res => res.text())
-            .then(text => document.getElementById('nav-placeholder').innerHTML = text);
-        
-        fetch('/footer.html')
-            .then(res => res.text())
-            .then(text => document.getElementById('footer-placeholder').innerHTML = text);
-    </script>
+    
+    <footer id="global-footer"></footer>
 </body>
 </html>
