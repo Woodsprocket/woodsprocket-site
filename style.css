@@ -105,7 +105,7 @@ main {
 }
 
 .detail-item {
-    flex: 0 1 auto;          
+    flex: 1;
     min-width: 250px;
 }
 
@@ -224,7 +224,7 @@ footer {
 /* MOBILE */
 @media (max-width: 768px) {
     .hero { flex-direction: column; text-align: center; }
-    .details-grid { grid-template-columns: 1fr; }
+    .details-grid { gap: 40px; padding: 40px 0; }
     
     .brand-name { font-size: 0.75rem; }
     
