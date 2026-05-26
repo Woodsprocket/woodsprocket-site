@@ -233,7 +233,12 @@ footer {
     .hero { flex-direction: column; text-align: center; }
     .details-grid { gap: 40px; padding: 40px 0; }
     
-    .brand-name { font-size: 0.75rem; }
+    .brand-name { 
+        font-size: 0.75rem;
+        width: 100%;
+        text-align: center;
+        padding-left: 0.2rem; 
+    }
     
     .nav-container { 
         padding: 0 20px; 
