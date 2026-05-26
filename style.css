@@ -234,6 +234,5 @@ footer {
         gap: 15px; 
     }
     
-    nav a { margin-left: 15px; margin-right: 15px; }
-    nav a:first-child { margin-left: 0; }
+    nav a { margin: 0; }
 }
