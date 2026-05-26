@@ -51,7 +51,8 @@ nav {
     text-decoration: none;
     width: auto;
     line-height: 1;
-    margin-right: -0.2rem;
+    letter-spacing: 0.2rem;
+    text-indent: 0.2rem;
 }
 
 .brand-name:hover {
