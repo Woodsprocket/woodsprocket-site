@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tumble Sort - Woodsprocket Studios</title>
+    <link rel="stylesheet" href="/style.css">
+    
+    <meta name="apple-itunes-app" content="app-id=6770652096">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main style="padding-top: 40px; padding-bottom: 80px;">
+        <section style="max-width: 800px; margin: 0 auto; text-align: center; padding: 0 20px;">
+            <img src="/apps/assets/tumble_sort_icon.png" alt="Tumble Sort App Icon" style="width: 150px; border-radius: 32px; box-shadow: 0 8px 24px rgba(0,0,0,0.6); margin-bottom: 25px;">
+            <h1 style="font-size: 3rem; margin-bottom: 10px;">Tumble Sort</h1>
+            <p style="font-size: 1.2rem; color: #a0a0a0; margin-bottom: 30px;">A delightful, physics-based puzzle experience.</p>
+            
+            <a href="https://apps.apple.com/us/app/tumble-sort/id6770652096" target="_blank" rel="noopener noreferrer" style="display: inline-block;">
+                <img src="/apps/assets/app_store_badge.svg" alt="Download on the App Store" style="width: 160px; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+            </a>
+        </section>
+
+        <section style="max-width: 800px; margin: 60px auto; padding: 0 20px; text-align: left; line-height: 1.7; color: #e0e0e0;">
+            <h2 style="border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 20px;">The Gameplay</h2>
+            <p>Tumble Sort is designed to be instantly playable but challenging to master. Guide falling items—from dogs and cats to cows—into their correct bins using intuitive physics mechanics. Perfect for short bursts of gameplay or long, relaxing puzzle sessions.</p>
+            
+            <h3 style="margin-top: 30px; margin-bottom: 15px; color: #fff;">Features</h3>
+            <ul style="padding-left: 20px; color: #a0a0a0;">
+                <li style="margin-bottom: 10px;"><strong>Intuitive Physics:</strong> Natural, satisfying item drops and bounces.</li>
+                <li style="margin-bottom: 10px;"><strong>Progressive Difficulty:</strong> The speed and complexity scale as you play.</li>
+                <li style="margin-bottom: 10px;"><strong>Premium Polish:</strong> Zero intrusive ads, just clean, uninterrupted gameplay.</li>
+            </ul>
+        </section>
+
+        <section style="max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center;">
+            <h2 style="border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 30px; text-align: left;">Screenshots</h2>
+            <div style="display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px; justify-content: center;">
+                <img src="/apps/assets/tumblesort_screen1.jpg" alt="Gameplay Screen 1" style="height: 400px; border-radius: 12px; border: 1px solid #333;">
+                <img src="/apps/assets/tumblesort_screen2.jpg" alt="Gameplay Screen 2" style="height: 400px; border-radius: 12px; border: 1px solid #333;">
+                <img src="/apps/assets/tumblesort_screen3.jpg" alt="Gameplay Screen 3" style="height: 400px; border-radius: 12px; border: 1px solid #333;">
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('/header.html').then(r => r.text()).then(html => document.getElementById('header-placeholder').innerHTML = html);
+        fetch('/footer.html').then(r => r.text()).then(html => document.getElementById('footer-placeholder').innerHTML = html);
+    </script>
+</body>
+</html>
