@@ -225,6 +225,15 @@ footer {
 @media (max-width: 768px) {
     .hero { flex-direction: column; text-align: center; }
     .details-grid { grid-template-columns: 1fr; }
+    
     .brand-name { font-size: 0.75rem; }
-    .nav-container { padding: 0 20px; }
+    
+    .nav-container { 
+        padding: 0 20px; 
+        flex-direction: column; 
+        gap: 15px; 
+    }
+    
+    nav a { margin-left: 15px; margin-right: 15px; }
+    nav a:first-child { margin-left: 0; }
 }
