@@ -7,14 +7,28 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" type="image/png" href="/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
+    <style>
         main {
             max-width: 1200px !important;
         }
 
+        /* Enforce a strict 3-column grid so the 4th item sits directly under the 1st */
+        .details-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 80px;
+        }
+
         .details-grid .detail-item {
-            flex: 1 1 0% !important; 
             text-align: center;
+        }
+
+        /* Stack into a single column on mobile screens */
+        @media (max-width: 768px) {
+            .details-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
         }
     </style>
     <meta name="apple-itunes-app" content="app-id=6770652096">
@@ -29,7 +43,7 @@
             <p class="subtitle">A collection of independent iOS software by Woodsprocket Studios.</p>
         </section>
 
-<section class="details-grid">
+        <section class="details-grid">
             <div class="detail-item">
                 <h3 style="color: var(--accent);">LAUNCHED!</h3>
                 <a href="/apps/tumble-sort/">
@@ -58,7 +72,15 @@
                 <h2>Project Cedar</h2>
                 <p>In development.</p>
             </div>
+
+            <div class="detail-item">
+                <h3>ACTIVE PROJECT</h3>
+                <img src="/apps/assets/placeholder_icon.png" alt="Placeholder Icon" style="width: 100px; border-radius: 22px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                <h2>Project Douka</h2>
+                <p>In development.</p>
+            </div>
         </section>
+    </main>
 
     <footer id="global-footer"></footer>
 
